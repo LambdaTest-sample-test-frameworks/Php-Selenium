@@ -3,10 +3,10 @@
 require 'vendor/autoload.php';
 
 $GLOBALS['LT_USERNAME'] = getenv('LT_USERNAME');
-if(!$GLOBALS['LT_USERNAME']) $GLOBALS['LT_USERNAME'] = "nikhily";
+if(!$GLOBALS['LT_USERNAME']) $GLOBALS['LT_USERNAME'] = "************************************";
 
 $GLOBALS['LT_APPKEY'] = getenv('LT_APPKEY');
-if(!$GLOBALS['LT_APPKEY']) $GLOBALS['LT_APPKEY'] = "MXZzl3jLwoc7IyAzGHJOFvotwZXIjnOIbhlcYHAZHeiVkXtQXb";
+if(!$GLOBALS['LT_APPKEY']) $GLOBALS['LT_APPKEY'] = "*****************************************";
 
 $GLOBALS['LT_BROWSER'] = getenv('LT_BROWSER');
 if(!$GLOBALS['LT_BROWSER']) $GLOBALS['LT_BROWSER'] = "chrome";
