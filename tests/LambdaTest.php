@@ -23,7 +23,7 @@ class LambdaTest{
 
    public function testAdd() {		
 		
-		$url = "https://". $GLOBALS['LT_USERNAME'] .":" . $GLOBALS['LT_APPKEY'] ."@stage-hub.lambdatest.com/wd/hub";		
+		$url = "https://". $GLOBALS['LT_USERNAME'] .":" . $GLOBALS['LT_APPKEY'] ."@beta-hub.lambdatest.com/wd/hub";		
 		$desired_capabilities = new DesiredCapabilities();
 		$desired_capabilities->setCapability('browserName',$GLOBALS['LT_BROWSER']);
 		$desired_capabilities->setCapability('version', $GLOBALS['LT_BROWSER_VERSION']);
