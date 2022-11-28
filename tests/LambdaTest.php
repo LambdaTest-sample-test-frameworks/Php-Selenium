@@ -5,14 +5,14 @@ require 'vendor/autoload.php';
 $GLOBALS['LT_USERNAME'] = getenv('LT_USERNAME');
 if(!$GLOBALS['LT_USERNAME']) $GLOBALS['LT_USERNAME'] = "************************************";
 
-$GLOBALS['LT_APPKEY'] = getenv('LT_APPKEY');
-if(!$GLOBALS['LT_APPKEY']) $GLOBALS['LT_APPKEY'] = "*****************************************";
+$GLOBALS['LT_ACCESS_KEY'] = getenv('LT_ACCESS_KEY');
+if(!$GLOBALS['LT_ACCESS_KEY']) $GLOBALS['LT_ACCESS_KEY'] = "*****************************************";
 
 $GLOBALS['LT_BROWSER'] = getenv('LT_BROWSER');
 if(!$GLOBALS['LT_BROWSER']) $GLOBALS['LT_BROWSER'] = "chrome";
 
 $GLOBALS['LT_BROWSER_VERSION'] = getenv('LT_BROWSER_VERSION');
-if(!$GLOBALS['LT_BROWSER_VERSION']) $GLOBALS['LT_BROWSER_VERSION'] ="63.0";
+if(!$GLOBALS['LT_BROWSER_VERSION']) $GLOBALS['LT_BROWSER_VERSION'] ="latest";
 
 $GLOBALS['LT_OPERATING_SYSTEM'] = getenv('LT_OPERATING_SYSTEM');
 if(!$GLOBALS['LT_OPERATING_SYSTEM']) $GLOBALS['LT_OPERATING_SYSTEM'] = "win10";
@@ -23,7 +23,7 @@ class LambdaTest{
 
    public function testAdd() {		
 		
-		$url = "https://". $GLOBALS['LT_USERNAME'] .":" . $GLOBALS['LT_APPKEY'] ."@stage-hub.lambdatest.com/wd/hub";		
+		$url = "https://". $GLOBALS['LT_USERNAME'] .":" . $GLOBALS['LT_ACCESS_KEY'] ."@hub.lambdatest.com/wd/hub";		
 		$desired_capabilities = new DesiredCapabilities();
 		$desired_capabilities->setCapability('browserName',$GLOBALS['LT_BROWSER']);
 		$desired_capabilities->setCapability('version', $GLOBALS['LT_BROWSER_VERSION']);
@@ -38,7 +38,7 @@ class LambdaTest{
 		self::$driver = RemoteWebDriver::create($url, $desired_capabilities); 		
 				
 		$itemName = 'Yey, Lets add it to list';
-        self::$driver->get("https://4dvanceboy.github.io/lambdatest/lambdasampleapp.html");
+        self::$driver->get("https://lambdatest.github.io/sample-todo-app/");
         $element1 = self::$driver->findElement(WebDriverBy::name("li1"));
 		$element1->click();
 			
