@@ -1,5 +1,5 @@
 {
-  "name": "bobisdacool1/php-selenium",
+  "name": "lambdatest/php-selenium",
   "type": "library",
   "minimum-stability" : "dev",
   "require": {
