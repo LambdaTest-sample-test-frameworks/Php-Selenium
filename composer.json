@@ -1,6 +1,9 @@
 {
+  "name": "lambdatest/php-selenium",
+  "type": "library",
+  "minimum-stability" : "dev",
   "require": {
     "phpunit/phpunit-selenium": "*",
     "facebook/webdriver": "dev-master"
-  }  
+  }
 }
